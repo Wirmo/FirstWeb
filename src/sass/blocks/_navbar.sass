@@ -1,3 +1,5 @@
+a
+    text-decoration: none
 .navbar
     margin-top: 7px
     margin-bottom: 8px
@@ -10,16 +12,20 @@
         align-items: center
         flex-direction: row
     &-contacts
-        margin-right: 20px
+        margin-right: 30px
         text-align: right
-        &-phone
-            font-size: 20px
-            margin-top: 10px
-            color: $text-color
-            font-weight: bold
         &-loc
-            font-size: 13px
             display: block
+            color: $text-color
+            margin-top: 9px
+            font-family: "Museo Sans Cyrl -300"
+            font-size: 13px
+            font-weight: 400
+        &-phone
+            color: $text-color
+            font-family: "Museo Sans Cyrl -700"
+            font-size: 20px
+            font-weight: 400
     &-button
         background-color: #ffd200
         width: 200px
@@ -27,9 +33,11 @@
         border: none
         border-radius: 10px
         font-size: 13px
-@media (max-width: 768px)
+@media(max-width: 320px)
     .navbar
-        &-contacts
-            display: none
-a
-    text-decoration: none
+        &-logo
+            width: 91px
+            height: 44px
+        &-button
+            width: 137px
+            height: 39px

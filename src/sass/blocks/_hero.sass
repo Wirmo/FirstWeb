@@ -1,0 +1,73 @@
+.hero
+    background-color: $bg
+    &_block
+        padding-top: 50px
+        padding-bottom: 52px
+        display: flex
+        align-items: center
+        &_content
+            width: 464px
+        &__title
+            font-family: "Museo Sans Cyrl -700"
+            font-size: 41px
+            font-weight: 400
+            line-height: 55px
+            color: $text-color
+        &__subtitle
+            display: block
+            font-family: "Museo Sans Cyrl -700"
+            font-size: 20px
+            font-weight: 400
+            line-height: 65px
+            color: $text-color
+            margin-top: 50px
+        &__img
+    &_list
+        display: block
+        width: 301px
+        padding-left: 0
+        &__item
+            display: flex
+            align-items: center
+            list-style-type: none
+            margin-bottom: 30px
+        &__ico
+            margin-right: 30px
+        &__text
+            color: $text-color
+            font-family: "Museo Sans Cyrl -300"
+            font-size: 14px
+            font-weight: 400
+            line-height: 24px
+@media (max-width: 1000px)
+    .container
+        max-width: 1000px
+        width: 80%
+    .hero
+        &_block
+            display: block
+            &_content
+                width: 100%
+@media (max-width: 320px)
+    .hero
+        &_block
+            padding-top: 46px
+            display: block
+            &__title
+                font-size: 24px
+                line-height: normal
+            &__subtitle
+                margin-top: 13px
+                font-size: 16px
+                line-height: normal
+            &_content
+                width: 271px
+        &_list
+            width: 271px
+            &__text
+                font-size: 12px
+                line-height: normal
+            &__ico
+                margin-right: 15px
+
+                
