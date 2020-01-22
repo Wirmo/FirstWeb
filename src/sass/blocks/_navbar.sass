@@ -1,0 +1,35 @@
+.navbar
+    margin-top: 7px
+    margin-bottom: 8px
+    &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-info
+        display: flex
+        align-items: center
+        flex-direction: row
+    &-contacts
+        margin-right: 20px
+        text-align: right
+        &-phone
+            font-size: 20px
+            margin-top: 10px
+            color: $text-color
+            font-weight: bold
+        &-loc
+            font-size: 13px
+            display: block
+    &-button
+        background-color: #ffd200
+        width: 200px
+        height: 50px
+        border: none
+        border-radius: 10px
+        font-size: 13px
+@media (max-width: 768px)
+    .navbar
+        &-contacts
+            display: none
+a
+    text-decoration: none
