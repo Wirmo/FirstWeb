@@ -1,7 +1,27 @@
+*
+    box-sizing: border-box
+a
+    text-decoration: none
 img
     max-width: 100%
 body
-    font-family: sans-serif
+    @include regular
+.input
+    border: 1px solid #dddddd
+    border-radius: 10px
+    padding-left: 26px
+    font-size: 15px
+    line-height: 24px
+    color: #999999 
+.button
+    background-color: $main-color
+    border: none
+    border-radius: 8px
+    @include bold
+    transition: 0.1s
+    &:hover
+        background-color: lighten($main-color, 15%)
+        cursor: pointer
 .container
     width: 1170px
     margin: auto
@@ -17,6 +37,6 @@ body
     .navbar
         &-contacts
             display: none
-@media(max-width: 320px)
+@media (max-width: 320px)
     .container
-        width: 277px
+        max-width: 95%

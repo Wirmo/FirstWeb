@@ -1,9 +1,59 @@
+@font-face {
+  font-family: 'Museo Sans 300 Light';
+  src: url("src/fonts/MuseoSans/MuseoSansCyrl-300.eot");
+  src: url("src/fonts/MuseoSans/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("src/fonts/MuseoSans/MuseoSansCyrl-300.woff") format("woff"), url("src/fonts/MuseoSans/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans 700 Bold';
+  src: url("src/fonts/MuseoSans/MuseoSansCyrl-700.eot");
+  src: url("src/fonts/MuseoSans/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("src/fonts/MuseoSans/MuseoSansCyrl-700.woff") format("woff"), url("src/fonts/MuseoSans/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
+}
+
+.input {
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding-left: 26px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.button {
+  background-color: #ffd200;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.button:hover {
+  background-color: #ffe04d;
+  cursor: pointer;
 }
 
 .container {
@@ -33,12 +83,8 @@ body {
 
 @media (max-width: 320px) {
   .container {
-    width: 277px;
+    max-width: 95%;
   }
-}
-
-a {
-  text-decoration: none;
 }
 
 .navbar {
@@ -77,28 +123,22 @@ a {
 }
 
 .navbar-contacts-loc {
-  display: block;
   color: #333333;
-  margin-top: 9px;
-  font-family: "Museo Sans Cyrl -300";
   font-size: 13px;
-  font-weight: 400;
 }
 
 .navbar-contacts-phone {
+  margin-top: 8px;
+  display: block;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
   color: #333333;
-  font-family: "Museo Sans Cyrl -700";
   font-size: 20px;
-  font-weight: 400;
 }
 
 .navbar-button {
-  background-color: #ffd200;
-  width: 200px;
+  width: 170px;
   height: 50px;
-  border: none;
-  border-radius: 10px;
-  font-size: 13px;
 }
 
 @media (max-width: 320px) {
@@ -109,6 +149,7 @@ a {
   .navbar-button {
     width: 137px;
     height: 39px;
+    font-size: 10px;
   }
 }
 
@@ -117,7 +158,7 @@ a {
 }
 
 .hero_block {
-  padding-top: 50px;
+  padding-top: 41px;
   padding-bottom: 52px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,31 +166,34 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .hero_block_content {
-  width: 464px;
+  width: 500px;
 }
 
 .hero_block__title {
-  font-family: "Museo Sans Cyrl -700";
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
   font-size: 41px;
-  font-weight: 400;
   line-height: 55px;
   color: #333333;
 }
 
 .hero_block__subtitle {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
   display: block;
-  font-family: "Museo Sans Cyrl -700";
   font-size: 20px;
-  font-weight: 400;
-  line-height: 65px;
   color: #333333;
-  margin-top: 50px;
+  margin-top: 45px;
 }
 
 .hero_list {
+  margin-top: 60px;
   display: block;
   width: 301px;
   padding-left: 0;
@@ -163,7 +207,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
   list-style-type: none;
-  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.hero_list__item-none {
+  margin-top: 24px;
 }
 
 .hero_list__ico {
@@ -172,7 +220,6 @@ a {
 
 .hero_list__text {
   color: #333333;
-  font-family: "Museo Sans Cyrl -300";
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -181,7 +228,7 @@ a {
 @media (max-width: 1000px) {
   .container {
     max-width: 1000px;
-    width: 80%;
+    width: 88%;
   }
   .hero_block {
     display: block;
@@ -217,6 +264,143 @@ a {
   }
   .hero_list__ico {
     margin-right: 15px;
+  }
+}
+
+.offer {
+  padding: 82px 0 92px 0;
+  background: url("../img/offer-bg.jpg") no-repeat;
+  background-size: contain;
+  background-position: center right;
+  position: relative;
+}
+
+.offer::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+
+.offer-block {
+  width: 50%;
+  padding-right: 91px;
+  position: relative;
+}
+
+.offer__title {
+  font-size: 24px;
+  line-height: 35px;
+  max-width: 355px;
+}
+
+.offer__subtitle {
+  font-size: 16px;
+  max-width: 231px;
+  margin-top: 22px;
+  line-height: normal;
+  margin-bottom: 28px;
+}
+
+.offer__input {
+  width: 239px;
+  height: 65px;
+  margin-bottom: 30px;
+}
+
+.offer__input:first-child {
+  margin-right: 11px;
+}
+
+.offer__button {
+  width: 100%;
+  height: 70px;
+  font-size: 16px;
+}
+
+.offer_discr {
+  padding-right: 10px;
+  margin-top: 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.offer_discr__el1 {
+  width: 48%;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.offer_discr__el2 {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.offer__tel {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  display: block;
+  color: #000;
+}
+
+@media (max-width: 1200px) {
+  .offer__input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer {
+    background-image: none;
+  }
+  .offer-block {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .offer_discr {
+    display: block;
+  }
+  .offer_discr__el1 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .offer {
+    padding-top: 53px;
+  }
+  .offer-block {
+    padding-right: 0;
+  }
+  .offer__title {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .offer__subtitle {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .offer__input {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .offer_discr__el2 {
+    margin: 0;
+  }
+  .offer__button {
+    padding: 0 60px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */

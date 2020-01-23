@@ -1,28 +1,27 @@
 .hero
     background-color: $bg
     &_block
-        padding-top: 50px
+        padding-top: 41px
         padding-bottom: 52px
         display: flex
         align-items: center
+        justify-content: space-between
         &_content
-            width: 464px
+            width: 500px
         &__title
-            font-family: "Museo Sans Cyrl -700"
+            @include bold
             font-size: 41px
-            font-weight: 400
             line-height: 55px
             color: $text-color
         &__subtitle
+            @include bold
             display: block
-            font-family: "Museo Sans Cyrl -700"
             font-size: 20px
-            font-weight: 400
-            line-height: 65px
             color: $text-color
-            margin-top: 50px
+            margin-top: 45px
         &__img
     &_list
+        margin-top: 60px
         display: block
         width: 301px
         padding-left: 0
@@ -30,19 +29,20 @@
             display: flex
             align-items: center
             list-style-type: none
-            margin-bottom: 30px
+            margin-top: 30px
+            &-none
+                margin-top: 24px
         &__ico
             margin-right: 30px
         &__text
             color: $text-color
-            font-family: "Museo Sans Cyrl -300"
             font-size: 14px
             font-weight: 400
             line-height: 24px
 @media (max-width: 1000px)
     .container
         max-width: 1000px
-        width: 80%
+        width: 88%
     .hero
         &_block
             display: block
